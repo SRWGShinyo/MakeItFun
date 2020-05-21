@@ -37,4 +37,9 @@ public class GlobalFunctionButtons : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void quit()
+    {
+        Application.Quit();
+    }
 }

@@ -1307,7 +1307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 474142044, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
       propertyPath: nextLevel
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
       propertyPath: m_text
