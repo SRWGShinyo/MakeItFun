@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level4_shymirror.unity
     guid: 3a51e0891ef817644b1878fd7cd0e85d
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 210ee3908eed3794896e18cdc3fa0ab5
+  - enabled: 1
+    path: Assets/Scenes/Level6_hatlevelReloaded.unity
+    guid: b621ec27dfa379149895c7edd5b29d40
+  - enabled: 1
+    path: Assets/Scenes/Level6_hatlevelReloadedFail.unity
+    guid: 719d970f1008e534cad880979cd065e2
   m_configObjects: {}

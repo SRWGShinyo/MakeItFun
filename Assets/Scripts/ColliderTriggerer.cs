@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ColliderTriggerer : MonoBehaviour
 {
+
+    public int toLoadOnDeath = 5;
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "MagicHat")
@@ -15,7 +17,7 @@ public class ColliderTriggerer : MonoBehaviour
 
         if (hit.gameObject.tag == "Death")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(toLoadOnDeath);
         }
     }
 

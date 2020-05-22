@@ -15,7 +15,8 @@ public class RobotScheduler : MonoBehaviour
         MOVE,
         TALK,
         CONTROLLER,
-        EVENT
+        EVENT,
+        ROTATION
     }
 
     [System.Serializable]
@@ -31,6 +32,7 @@ public class RobotScheduler : MonoBehaviour
     public GameObject textPanel;
     public TextMeshProUGUI textMesh;
     public FPSPlayerMovement controller;
+    public FPSCameraLook rotator;
     public GameObject player;
 
     public Queue<EventAction> queueAc = new Queue<EventAction>();
@@ -79,11 +81,15 @@ public class RobotScheduler : MonoBehaviour
                 break;
             case EventAction.CONTROLLER:
                 controller.enabled = !controller.isActiveAndEnabled;
+                playNextAction();
                 break;
             case EventAction.EVENT:
                 GameObject.FindGameObjectWithTag("Event").GetComponent<IEvent>().startEvent();
                 break;
-
+            case EventAction.ROTATION:
+                rotator.enabled = !rotator.enabled;
+                playNextAction();
+                break;
         }
     }
 

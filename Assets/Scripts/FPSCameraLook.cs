@@ -8,6 +8,11 @@ public class FPSCameraLook : MonoBehaviour
     public Transform playerBody;
 
     float xRotation = 0;
+
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     // Start is called before the first frame update
     void Start()
     {
