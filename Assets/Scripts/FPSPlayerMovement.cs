@@ -20,8 +20,6 @@ public class FPSPlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        Debug.Log(isGrounded);
-        Debug.Log(groundCheck.position);
         anim.SetBool("isGround", isGrounded);
 
         if (isGrounded && currentVelocity.y < 0)

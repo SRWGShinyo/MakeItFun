@@ -90,7 +90,7 @@ public class RobotScheduler : MonoBehaviour
     private IEnumerator moveTo(Vector3 position)
     {
         anim.SetBool("Roll_Anim", true);
-        yield return new WaitForSeconds(3.4f);
+        yield return new WaitForSeconds(2.4f);
         transform.DOMove(position, 2f);
         yield return new WaitForSeconds(1.8f);
         anim.SetBool("Roll_Anim", false);
