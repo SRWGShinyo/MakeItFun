@@ -10457,6 +10457,7 @@ MonoBehaviour:
   textPanel: {fileID: 142498450}
   textMesh: {fileID: 1704233638}
   controller: {fileID: 6943433116345499413}
+  rotator: {fileID: 0}
   player: {fileID: 8296172668734849401}
 --- !u!4 &811948943 stripped
 Transform:
@@ -26524,6 +26525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd2b9a4801128a4a97abe1d36aee24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toLoadOnDeath: 5
 --- !u!1 &7205022235312005142
 GameObject:
   m_ObjectHideFlags: 0
@@ -26641,7 +26643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 474142044, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
       propertyPath: nextLevel
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
       propertyPath: m_text

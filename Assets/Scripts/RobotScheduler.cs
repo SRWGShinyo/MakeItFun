@@ -61,7 +61,8 @@ public class RobotScheduler : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(player.transform);
+        if (player)
+            transform.LookAt(player.transform);
     }
 
     public void playNextAction()

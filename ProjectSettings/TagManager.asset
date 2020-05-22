@@ -9,6 +9,7 @@ TagManager:
   - Event
   - Robot
   - Death
+  - Pillar
   layers:
   - Default
   - TransparentFX

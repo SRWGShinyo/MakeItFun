@@ -18,6 +18,7 @@ public class ColliderTriggerer : MonoBehaviour
         if (hit.gameObject.tag == "Death")
         {
             SceneManager.LoadScene(toLoadOnDeath);
+            return;
         }
     }
 }
