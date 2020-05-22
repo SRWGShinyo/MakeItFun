@@ -20,9 +20,4 @@ public class ColliderTriggerer : MonoBehaviour
             SceneManager.LoadScene(toLoadOnDeath);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Enter");
-    }
 }
