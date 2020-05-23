@@ -20655,34 +20655,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 474142044, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: nextLevel
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_text
-      value: That's what I call getting involved in meditation !
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_fontSize
-      value: 43.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 543962513, guid: 62f7f0ad2cb0e8947ad84b89de4d5258, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7679696439160988026, guid: 62f7f0ad2cb0e8947ad84b89de4d5258,
         type: 3}
       propertyPath: m_Name
