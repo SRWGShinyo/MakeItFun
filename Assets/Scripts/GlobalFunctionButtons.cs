@@ -8,9 +8,15 @@ public class GlobalFunctionButtons : MonoBehaviour
     public int nextLevel;
     public GameObject panel;
 
+    public bool destroyAmbient = false;
 
     public void loadNext()
     {
+        if (destroyAmbient)
+        {
+            Destroy(AmbientBehaviour.ambientActive.gameObject);
+            AmbientBehaviour.ambientActive = null;
+        }
         SceneManager.LoadScene(nextLevel);
     }
 
@@ -28,6 +34,9 @@ public class GlobalFunctionButtons : MonoBehaviour
 
     public void home()
     {
+        Destroy(AmbientBehaviour.ambientActive.gameObject);
+        AmbientBehaviour.ambientActive = null;
+
         EventSystem.current.SetSelectedGameObject(null);
         SceneManager.LoadScene(0);
     }
