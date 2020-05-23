@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ddcfa96f21dda46be61ba203d71f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triesRef: 5
+  tries: 3
   numberTing: 3
   pillars:
   - {fileID: 1363349277}

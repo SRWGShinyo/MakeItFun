@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LightEvent : MonoBehaviour, IEvent
 {
-    public int triesRef = 5;
-    int tries;
+
+    public int tries = 3;
     public int numberTing = 3;
     public List<GameObject> pillars;
     public List<GameObject> startPos;
@@ -34,7 +34,6 @@ public class LightEvent : MonoBehaviour, IEvent
 
         robot = GameObject.FindGameObjectWithTag("Robot").GetComponent<RobotScheduler>();
         source = GetComponent<AudioSource>();
-        tries = triesRef;
         StartCoroutine(setUpScene());
     }
 
@@ -86,8 +85,8 @@ public class LightEvent : MonoBehaviour, IEvent
         if (name != expected) // The player made a mistake
         {
             orderExpected.Clear();
-            numberTing -= triesRef - tries;
-            tries = triesRef;
+            numberTing -= 1;
+            tries += 1;
 
             source.clip = bzz;
             source.Play();
