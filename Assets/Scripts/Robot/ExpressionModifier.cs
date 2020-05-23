@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ExpressionModifier : MonoBehaviour
 {
@@ -16,6 +15,11 @@ public class ExpressionModifier : MonoBehaviour
     public GameObject TrustL;
     public GameObject TrustR;
 
+    public Sprite normal;
+    public Sprite happy;
+    public Sprite Frustr;
+    public Sprite trust;
+    public Image ballieTalk;
 
     public void changeExpression(RobotScheduler.stringContainer.faceExpression expression)
     {
@@ -23,22 +27,27 @@ public class ExpressionModifier : MonoBehaviour
         {
             case RobotScheduler.stringContainer.faceExpression.NORMAL:
                 deactivateAll();
+                ballieTalk.sprite = normal;
                 activateOnly(normL, normR);
                 break;
             case RobotScheduler.stringContainer.faceExpression.HAPPY:
                 deactivateAll();
+                ballieTalk.sprite = happy;
                 activateOnly(happyL, happyR);
                 break;
             case RobotScheduler.stringContainer.faceExpression.FRUSTR:
                 deactivateAll();
+                ballieTalk.sprite = Frustr;
                 activateOnly(FrustrL, FrustrR);
                 break;
             case RobotScheduler.stringContainer.faceExpression.TRUST:
                 deactivateAll();
+                ballieTalk.sprite = trust;
                 activateOnly(TrustL, TrustR);
                 break;
             default:
                 deactivateAll();
+                ballieTalk.sprite = normal;
                 activateOnly(normL, normR);
                 break;
         }
