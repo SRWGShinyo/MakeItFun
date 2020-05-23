@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using TMPro;
 using UnityEngine;
 
@@ -22,7 +23,16 @@ public class RobotScheduler : MonoBehaviour
     [System.Serializable]
     public class stringContainer
     {
+        public enum faceExpression
+        {
+            NORMAL,
+            HAPPY,
+            TRUST,
+            FRUSTR
+        }
+
         public List<string> strings;
+        public List<faceExpression> expressions;
     }
 
     public List<EventAction> actions = new List<EventAction>();
@@ -40,9 +50,11 @@ public class RobotScheduler : MonoBehaviour
     public Queue<stringContainer> stringContainersQueue = new Queue<stringContainer>();
 
     Animator anim;
+    ExpressionModifier express;
 
     void Start()
     {
+        express = GetComponent<ExpressionModifier>();
         voice = GetComponent<AudioSource>();
         DOTween.Init();
 
@@ -106,9 +118,11 @@ public class RobotScheduler : MonoBehaviour
 
     private IEnumerator talk(stringContainer sc)
     {
+        int counter = 0;
         textPanel.transform.DOScale(1, 1f);
         foreach (string st in sc.strings)
         {
+            express.changeExpression(sc.expressions[counter]);
             textMesh.text = "";
             foreach (char c in st)
             {
@@ -120,6 +134,7 @@ public class RobotScheduler : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
             yield return new WaitForSeconds(3f);
+            counter++;
         }
         textPanel.transform.DOScale(0, 1f);
         playNextAction();

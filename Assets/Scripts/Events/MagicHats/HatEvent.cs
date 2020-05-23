@@ -81,7 +81,7 @@ public class HatEvent : MonoBehaviour, IEvent
         {
             bottomPit.SetActive(false);
             RobotScheduler robot = GameObject.FindGameObjectWithTag("Robot").GetComponent<RobotScheduler>();
-            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "Ohhh...too bad !" } });
+            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "Ohhh...too bad !" }, expressions = new List<RobotScheduler.stringContainer.faceExpression> { RobotScheduler.stringContainer.faceExpression.FRUSTR} });
             robot.queueAc.Enqueue(RobotScheduler.EventAction.TALK);
             robot.playNextAction();
         }
@@ -89,7 +89,7 @@ public class HatEvent : MonoBehaviour, IEvent
         else
         {
             RobotScheduler robot = GameObject.FindGameObjectWithTag("Robot").GetComponent<RobotScheduler>();
-            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "Well done !" } });
+            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "Well done !" }, expressions = new List<RobotScheduler.stringContainer.faceExpression> { RobotScheduler.stringContainer.faceExpression.HAPPY } });
             robot.queueAc.Enqueue(RobotScheduler.EventAction.TALK);
             robot.playNextAction();
             RenderSettings.ambientIntensity = 1.2f;

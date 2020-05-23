@@ -1564,6 +1564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8277499147463008866, guid: 5f835046112fcd14b8ff1ce315e07d73,
         type: 3}
+      propertyPath: talks.Array.data[0].expressions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277499147463008866, guid: 5f835046112fcd14b8ff1ce315e07d73,
+        type: 3}
       propertyPath: pivots.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -1615,7 +1620,7 @@ PrefabInstance:
     - target: {fileID: 8277499147463008866, guid: 5f835046112fcd14b8ff1ce315e07d73,
         type: 3}
       propertyPath: talks.Array.data[0].strings.Array.data[1]
-      value: Good luck ! :D
+      value: Good luck !
       objectReference: {fileID: 0}
     - target: {fileID: 8277499147463008866, guid: 5f835046112fcd14b8ff1ce315e07d73,
         type: 3}
@@ -1636,6 +1641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: talks.Array.data[1].strings.Array.data[2]
       value: '...and pray you''re right ! :D'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277499147463008866, guid: 5f835046112fcd14b8ff1ce315e07d73,
+        type: 3}
+      propertyPath: talks.Array.data[0].expressions.Array.data[1]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f835046112fcd14b8ff1ce315e07d73, type: 3}

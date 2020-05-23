@@ -92,7 +92,7 @@ public class LightEvent : MonoBehaviour, IEvent
             source.clip = bzz;
             source.Play();
 
-            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() {"Oooh...too bad...", "Let's try again !" } });
+            robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() {"Oooh...too bad...", "Let's try again !" }, expressions = new List<RobotScheduler.stringContainer.faceExpression> { RobotScheduler.stringContainer.faceExpression.FRUSTR, RobotScheduler.stringContainer.faceExpression.HAPPY } });
             robot.queueAc.Enqueue(RobotScheduler.EventAction.TALK);
             robot.queueAc.Enqueue(RobotScheduler.EventAction.EVENT);
             robot.playNextAction();
@@ -109,7 +109,7 @@ public class LightEvent : MonoBehaviour, IEvent
                         go.GetComponent<LightPillar>().IEmit();
                     }
                     flag.SetActive(true);
-                    robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "You did it ! You're the best :D" } });
+                    robot.stringContainersQueue.Enqueue(new RobotScheduler.stringContainer() { strings = new List<string>() { "You did it ! You're the best !" }, expressions = new List<RobotScheduler.stringContainer.faceExpression> { RobotScheduler.stringContainer.faceExpression.HAPPY } });
                     robot.queueAc.Enqueue(RobotScheduler.EventAction.TALK);
                     source.clip = poof;
                     source.Play();
