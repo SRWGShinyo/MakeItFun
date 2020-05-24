@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level8 - Music.unity
     guid: 16073c125dd0f124d81e653a74e286a8
+  - enabled: 1
+    path: Assets/Scenes/Level9_quizz.unity
+    guid: e906e718135d9cd41960fd248cad575e
+  - enabled: 1
+    path: Assets/Scenes/Level9_Reloaded.unity
+    guid: d474b1be97614984da97b10411c17a3d
   m_configObjects: {}

@@ -20,5 +20,10 @@ public class ColliderTriggerer : MonoBehaviour
             SceneManager.LoadScene(toLoadOnDeath);
             return;
         }
+
+        if (hit.gameObject.tag == "QuizzPillar")
+        {
+            hit.gameObject.GetComponent<QuizzPillar>().selectAnswer();
+        }
     }
 }
